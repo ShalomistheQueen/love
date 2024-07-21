@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e0f2f1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            
+        }
+        .contact-form {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 500px;
+        }
+        .contact-form h2 {
+            margin-top: 0;
+            font-size: 24px;
+            color: #333333;
+        }
+        .contact-form label {
+            display: block;
+            margin-top: 10px;
+            color: #666666;
+        }
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #cccccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        .contact-form input[type="radio"] {
+            width: auto;
+            margin-right: 10px;
+        }
+        .contact-form .consent {
+            display: flex;
+            align-items: center;
+            margin-top: 10px;
+        }
+        .contact-form .consent input {
+            width: auto;
+            margin-right: 10px;
+        }
+        .contact-form button {
+            background-color: #00796b;
+            color: #ffffff;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 20px;
+            width: 100%;
+        }
+        .contact-form button:hover {
+            background-color: #004d40;
+        }
+        .generalinquiry{
+            border: 1px solid black ;
+            justify-content: left;
+        }
+
+        .support-request{
+            border: 1px solid black ;
+            justify-content: right;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="contact-form">
+        <h2>Contact Us</h2>
+        <form>
+            <label for="first-name">First Name *</label>
+            <input type="text" id="first-name" name="first-name" required>
+            
+            <label for="last-name">Last Name *</label>
+            <input type="text" id="last-name" name="last-name" required>
+            
+            <label for="email">Email Address *</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="query-type">Query Type *</label>
+            <div class="generalinquiry"><input type="radio" id="general-enquiry" name="query-type" value="general-enquiry" required>
+                <label for="general-enquiry" style="display:inline;">General Enquiry</label></div>
+          
+            <div class="support-request"><input type="radio" id="support-request" name="query-type" value="support-request" required>
+                <label for="support-request" style="display: inline;">Support Request</label></div>
+            
+            <label for="message">Message *</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+            
+            <div class="consent">
+                <input type="checkbox" id="consent" name="consent" required>
+                <label for="consent">I consent to being contacted by the team *</label>
+            </div>
+            
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>
